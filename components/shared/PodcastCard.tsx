@@ -1,3 +1,4 @@
+import { PodcastCardProps } from "@/types";
 import Image from "next/image";
 
 type PodcastProps = {
@@ -12,7 +13,7 @@ export default function PodcastCard({
   title,
   description,
   podcastId,
-}: PodcastProps) {
+}: PodcastCardProps) {
   return (
     <div className="cursor-pointer">
       <figure className="flex flex-col gap-2">
