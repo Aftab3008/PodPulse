@@ -9,6 +9,10 @@ const nextConfig = {
             {
                 protocol: 'https',
                 hostname: "exciting-toad-970.convex.cloud",
+            },
+            {
+                protocol: 'https',
+                hostname: "img.clerk.com"
             }
         ]
     }
