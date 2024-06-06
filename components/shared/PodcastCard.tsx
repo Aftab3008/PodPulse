@@ -1,13 +1,8 @@
+import { api } from "@/convex/_generated/api";
 import { PodcastCardProps } from "@/types";
+import { useMutation } from "convex/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-
-type PodcastProps = {
-  imgUrl: string;
-  title: string;
-  description: string;
-  podcastId: number;
-};
 
 export default function PodcastCard({
   imgUrl,
@@ -16,9 +11,11 @@ export default function PodcastCard({
   podcastId,
 }: PodcastCardProps) {
   const router = useRouter();
+  const incrementViews = useMutation(api.podcasts.incrementPodcastViews);
 
   const handleViews = () => {
     //todo: increment views
+    incrementViews({ podcastId });
     router.push(`/podcast/${podcastId}`);
   };
   return (

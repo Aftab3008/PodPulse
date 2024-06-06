@@ -3,6 +3,7 @@ import MobileNav from "@/components/shared/MobileNav";
 import RightSidebar from "@/components/shared/RightSidebar";
 import Image from "next/image";
 import { Toaster } from "@/components/ui/toaster";
+import PodcastPlayer from "@/components/shared/PodcastPlayer";
 
 export default function layout({
   children,
@@ -27,6 +28,7 @@ export default function layout({
         </section>
         <RightSidebar />
       </main>
+      <PodcastPlayer />
     </div>
   );
 }

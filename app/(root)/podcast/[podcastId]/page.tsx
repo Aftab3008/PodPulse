@@ -44,7 +44,9 @@ export default function page({
             width={24}
             height={24}
           />
-          <h2 className="text-16 font-bold text-white-1">{podcast?.views}</h2>
+          <h2 className="text-16 font-bold text-white-1">
+            {formatViews(podcast?.views)}
+          </h2>
         </figure>
       </header>
       <PodcastDetailsPlayer
